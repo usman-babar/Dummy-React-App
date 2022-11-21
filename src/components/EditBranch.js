@@ -35,13 +35,13 @@ export default function EditBranch() {
   const { id } = useParams();
 
   useEffect(() => {
-    // loadBranchDetails();
+    loadBranchDetails();
   }, []);
 
-  // const loadBranchDetails = async () => {
-  //   const response = await getBranch(id);
-  //   setBranch(response.data);
-  // };
+  const loadBranchDetails = async () => {
+    const response = await getBranch(id);
+    setBranch(response.data);
+  };
 
   const onValueChange = (e) => {
     setBranch({ ...branch, [e.target.name]: e.target.value });
